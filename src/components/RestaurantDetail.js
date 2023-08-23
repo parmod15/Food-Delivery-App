@@ -32,7 +32,8 @@ const RestaurantDetail = () => {
             <div>
                 <h1>MENU</h1>
                 <ul>
-                    {(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards).map((item) => <li className="text-menu">{item?.card?.card?.title} <button className="p-1 bg-green-300" onClick={() => addFoodItem(item)}>add</button></li>)}
+                    {(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards).map((item) => <li className="text-menu">{item?.card?.card?.title} 
+                    <button className="p-1 bg-green-300" onClick={() => addFoodItem(item)}>add</button></li>)}
                 </ul>
                 {/* {console.log(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card.title)} */}
             </div>

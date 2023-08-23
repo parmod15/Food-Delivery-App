@@ -1,4 +1,4 @@
-import React, { Children, lazy, useState } from "react";
+import React, { Children, lazy, useState, Suspense } from "react";
 import ReactDom from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,7 +9,6 @@ import Error from "./components/Error";
 import RestaurantDetail from "./components/RestaurantDetail";
 import Profile from "./components/ProfileClass";
 import Cart from "./components/Cart";
-import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
@@ -23,19 +22,19 @@ const AppLayout = () => {
   const [user, setUser] = useState({
     name: "parmod",
     email: "email",
-  })
+  });
   return (
-    <Provider store={store} >
-      <UserContext.Provider value={
-        {
+    <Provider store={store}>
+      <UserContext.Provider
+        value={{
           user: user,
-        }
-      }>
+        }}
+      >
         <Header />
         <Outlet />
         <Footer />
       </UserContext.Provider>
-    </ Provider>
+    </Provider>
   );
 };
 
@@ -47,21 +46,25 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />
+        element: <Body />,
       },
       {
         path: "/about",
-        element: <Suspense fallback={<h1>loading...</h1>}><About /></Suspense>,
+        element: (
+          <Suspense fallback={<h1>loading...</h1>}>
+            <About />
+          </Suspense>
+        ),
         children: [
           {
             path: "profile",
             element: <Profile />,
-          }
-        ]
+          },
+        ],
       },
       {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "/restaurant/:id",
@@ -69,18 +72,19 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/instamart",
-        element:
-          <Suspense fallback={<Shimmer />}><Instamart /></Suspense>,
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
       {
         path: "/cart",
-        element: <Cart />
+        element: <Cart />,
       },
     ],
   },
-
 ]);
-
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
