@@ -70,6 +70,26 @@
         animation: shimmer-overlay 1s infinite;
       }
 
+      /* RESTAURANT DETAILS SHIMMER DESIGN */
+      .restaurant-details {
+        width: 50%;
+        height: 24rem;
+        background-color: gray;
+        position: relative;
+      }
+      .restaurant-details::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0px;
+        background-image: linear-gradient(to bottom right, white, lightgray);
+        animation: shimmer-overlay 1s infinite;
+      }
+
       /*  */
     </style>
   </head>
