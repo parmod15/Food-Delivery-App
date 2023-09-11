@@ -13,6 +13,65 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* HERO SHIMMER DESIGN */
+      .shimmer-hero {
+        width: 100vw;
+        height: 21rem;
+        position: relative;
+      }
+      .shimmer-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100vw;
+        height: 21rem;
+        animation-name: shimmer-overlay;
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(186, 219, 250),
+          lightgray
+        );
+        animation: shimmer-overlay 1s infinite;
+      }
+      @keyframes shimmer-overlay {
+        0% {
+          background-color: lightgray;
+        }
+        50% {
+          background-color: white;
+          opacity: 0.6;
+        }
+        100% {
+          background-color: lightgray;
+        }
+      }
+
+      /* RESTAURANT SHIMMER DESIGN */
+      .shimmer-restaurant {
+        margin-bottom: 4rem;
+        height: 10rem;
+        width: 13rem;
+        background-color: lightgray;
+        position: relative;
+      }
+      .shimmer-restaurant::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0px;
+        background-image: linear-gradient(to bottom right, white, lightgray);
+        animation: shimmer-overlay 1s infinite;
+      }
+
+      /*  */
+    </style>
   </head>
   <body>
     <div id="root">Not rendered</div>

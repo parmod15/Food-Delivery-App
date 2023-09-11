@@ -88,10 +88,6 @@ const Body = () => {
           </div>
           {/* <button></button> */}
         </div>
-        {/* <div></div> */}
-        <div className="bg-green-300 text-md w-16 absolute -bottom-6 right-[36.5rem] text-white">
-          Trending
-        </div>
       </div>
       <h2 className="text-center font-poppins text-4xl pt-3  font-semibold">
         ALL Restaurants

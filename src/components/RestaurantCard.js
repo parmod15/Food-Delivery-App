@@ -11,7 +11,7 @@ const RestaurantCard = ({
   const { user } = useContext(UserContext);
 
   return (
-    <div className="w-52 p-2 m-5 shadow-md h-4/5 font-poppins">
+    <div className="w-52 p-2 m-5 shadow-md h-4/5 font-poppins hover:scale-105 transition-all duration-500 hover:shadow-none">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
       <div className="">
         <h2 className="font-bold font-poppins h-12 pt-2 w[100%]">{name}</h2>
