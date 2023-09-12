@@ -52,41 +52,70 @@ const RestaurantDetail = () => {
         <hr></hr>
 
         {/*  IMAGE AND MENU SECTION */}
-        <div className=" w-10/12 mx-auto  justify-between">
+        <div className=" w-10/12 mx-auto flex flex-col  justify-around">
           <img
-            className="w-96 h-96 rounded-xl"
+            className="w-full h-80 rounded-sm mt-8"
             src={
               IMG_CDN_URL +
               restaurant.cards[0]?.card?.card?.info?.cloudinaryImageId
             }
           ></img>
-          {/* MENU DETAILS */}
-          <div className="flex flex-col">
-            <h1>MENU</h1>
 
-            <ul>
-              {(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards).map(
+          <h1 className="my-12 font-bold text-4xl font-poppins text-center">
+            MENU
+          </h1>
+
+          {/* MENU DETAILS */}
+          <div className="flex mx-auto w-10/12 ">
+            {/*  new design */}
+            <div className=" flex flex-col justify-between font-poppins">
+              {(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards).map(
                 (item) => (
-                  <div>
-                    <li className="bg-red-300 my-8">
-                      {item?.card?.card?.title}
-                      <button
-                        className="p-1 bg-green-300"
-                        onClick={() => addFoodItem(item)}
-                      >
-                        add
-                      </button>
-                    </li>
+                  <div className=" ">
+                    {/* {console.log(item.card.info)} */}
+                    {/* MENU ITEMS CONTAINER */}
+                    <div className="py-2 border border-red-500  flex flex-row justify-between items-center ">
+                      {/* MENU ITEM DETAILS */}
+                      <div className="flex flex-col">
+                        <span className="text-lg font-extrabold">
+                          {item?.card?.info?.name}
+                        </span>
+
+                        <span className="text-sm font-extralight">
+                          {item?.card?.info?.itemAttribute?.vegClassifier}
+                        </span>
+
+                        <span className="font-bold text-sm">
+                          ₹{item?.card?.info?.price / 100}
+                        </span>
+
+                        <span className="font-extralight text-sm ">
+                          {item?.card?.info?.description}
+                        </span>
+                      </div>
+
+                      {/* MENU IMAGE AND ADD BUTTON */}
+                      <div>
+                        <img
+                          className="w-48 rounded-lg"
+                          src={IMG_CDN_URL + item?.card?.info?.imageId}
+                        ></img>
+
+                        <button
+                          className="p-1 w-20 text-green-500 rounded-md font-bold border
+                           border-green-500 hover:bg-green-500 hover:text-white transition-all duration-500"
+                          onClick={() => addFoodItem(item)}
+                        >
+                          add
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )
               )}
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div>
-        {/* {console.log(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card.title)} */}
       </div>
     </div>
   );

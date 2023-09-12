@@ -72,9 +72,10 @@
 
       /* RESTAURANT DETAILS SHIMMER DESIGN */
       .restaurant-details {
-        width: 50%;
-        height: 24rem;
-        background-color: gray;
+        margin: 5rem auto 1rem;
+        width: 90%;
+        height: 20rem;
+        background-color: lightgray;
         position: relative;
       }
       .restaurant-details::after {
@@ -86,6 +87,51 @@
         right: 0;
         bottom: 0;
         left: 0px;
+        background-image: linear-gradient(to bottom right, white, lightgray);
+        animation: shimmer-overlay 1s infinite;
+      }
+
+      /* MENU DESIGN SHIMMER */
+      .menu-name {
+        width: 16rem;
+        margin: auto;
+        height: 2rem;
+        text-align: center;
+        background-color: lightgray;
+        position: relative;
+      }
+      .menu-name::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, white, lightgray);
+        animation: shimmer-overlay 1s infinite;
+      }
+
+      /*  MENU ITEMS SHIMMER DESIGN */
+      .header-item{
+        wd
+        80
+      }
+      .menu-items {
+        width: 80%;
+        height: 12rem;
+        margin: 2rem auto;
+        background-color: lightgray;
+        position: relative;
+      }
+      .menu-items::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
         background-image: linear-gradient(to bottom right, white, lightgray);
         animation: shimmer-overlay 1s infinite;
       }
