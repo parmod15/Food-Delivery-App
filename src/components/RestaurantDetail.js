@@ -23,7 +23,7 @@ const RestaurantDetail = () => {
     <div className="flex flex-col font-poppins">
       <div className="w-full">
         {/* HEADER AREA */}
-        <div className=" flex justify-between  w-10/12 mx-auto ">
+        <div className="pt-8 flex justify-between  w-10/12 mx-auto ">
           {/* RESTAURANT NAME AND AREA */}
           <div>
             <h2 className="text-xl font-bold">
@@ -74,7 +74,7 @@ const RestaurantDetail = () => {
                   <div className=" ">
                     {/* {console.log(item.card.info)} */}
                     {/* MENU ITEMS CONTAINER */}
-                    <div className="py-2 border border-red-500  flex flex-row justify-between items-center ">
+                    <div className="py-2 flex flex-row justify-between items-center ">
                       {/* MENU ITEM DETAILS */}
                       <div className="flex flex-col">
                         <span className="text-lg font-extrabold">
@@ -110,6 +110,7 @@ const RestaurantDetail = () => {
                         </button>
                       </div>
                     </div>
+                    <hr></hr>
                   </div>
                 )
               )}
