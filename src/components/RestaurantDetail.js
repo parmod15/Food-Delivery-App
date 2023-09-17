@@ -22,11 +22,12 @@ const RestaurantDetail = () => {
   ) : (
     <div className="flex flex-col font-poppins">
       <div className="w-full">
+
         {/* HEADER AREA */}
-        <div className="pt-8 flex justify-between  w-10/12 mx-auto ">
+        <div className="pt-8 flex justify-between  w-10/12 mx-auto border border-green-500 px-4 py-4 rounded-lg mt-10">
           {/* RESTAURANT NAME AND AREA */}
           <div>
-            <h2 className="text-xl font-bold">
+            <h2 className="text-xl font-bold bg-green-100">
               {restaurant.cards[0]?.card?.card?.info?.name}
             </h2>
             <h2 className="text-lg opacity-80">
@@ -54,7 +55,7 @@ const RestaurantDetail = () => {
         {/*  IMAGE AND MENU SECTION */}
         <div className=" w-10/12 mx-auto flex flex-col  justify-around">
           <img
-            className="w-full h-80 rounded-sm mt-8"
+            className="w-full h-96 rounded-sm mt-8"
             src={
               IMG_CDN_URL +
               restaurant.cards[0]?.card?.card?.info?.cloudinaryImageId
@@ -117,6 +118,7 @@ const RestaurantDetail = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

@@ -1,14 +1,12 @@
 import { IMG_CDN_URL } from "../config";
 
-const FoodItem = ({ name, description, imageId, price }) => {
+const FoodItem = ({ name, imageId, price }) => {
   return (
     <div className="w-52 p-2 m-5 shadow-md h-4/5 font-poppins">
       <img src={IMG_CDN_URL + imageId} />
       <div className="">
-        <h2 className="font-bold font-poppins h-12 pt-2 w[100%]">{name}</h2>
-
-        <h3 className="font-poppins text-sm h-14 pb-12 pt-2">{description}</h3>
-        <h4 className=" text-lg">rupees {price / 100}</h4>
+        <h2 className="font-bold font-poppins text-sm h-12 ">{name}</h2>
+        <h4 className=" text-lg ">₹{price / 100}</h4>
       </div>
     </div>
   );

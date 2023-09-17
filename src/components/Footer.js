@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="w-full bg-blue-700 text-white font-poppins ">
+    <div className="w-full bg-black text-white font-poppins ">
       <div className="w-11/12 flex justify-between pt-5 mx-auto ">
         <ul className="flex gap-10 items-baseline">
           <h1 className="text-2xl font-extrabold font-poppins">Roti Time </h1>

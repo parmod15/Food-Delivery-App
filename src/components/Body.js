@@ -47,14 +47,14 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="flex flex-row justify-center gap-20 py-14 bg-blue-700">
+      <div className="flex flex-row justify-center gap-20 py-14 bg-slate-200">
         <img
           src={hero_image}
           className="h-56"
           width={"380px"}
           height={"100px"}
         ></img>
-        <div className="flex flex-col gap-5 font-poppins text-white">
+        <div className="flex flex-col gap-5 font-poppins ">
           <h2 className="text-3xl">
             Discover restaurants near that <br></br> delivers near you.
           </h2>
