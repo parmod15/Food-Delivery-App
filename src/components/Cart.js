@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import FoodItem from "./FoodItem";
 import { clearCart } from "../utils/cartSlice";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   let [counter, setCounter] = useState(0);
@@ -24,13 +25,14 @@ const Cart = () => {
     cartLengthChecker(cartItems);
   }, []);
 
-
-
   return counter === 0 ? (
     // EMPTY CARD WARNING
     <div className="flex font-poppins w-5/12 mx-auto h-96  items-center justify-center text-3xl">
       <div>
         <h1>Your Cart is Empty Add something :)</h1>
+        <p className="underline mt-4">
+          <Link to="/">Order now</Link>
+        </p>
       </div>
     </div>
   ) : (

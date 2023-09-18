@@ -30,8 +30,8 @@ class About extends Component {
         <div className="py-24 flex flex-col items-center justify-center w-10/12 mx-auto">
           <h1 className="text-4xl">What’s In Store For The Future?</h1>
           <p className=" text-center py-8 w-9/12">
-            Swiggy has grand plans to be India’s most loved hyperlocal player.
-            It aims to be the most accessible platform on the network -
+            Roti time has grand plans to be India’s most loved hyperlocal
+            player. It aims to be the most accessible platform on the network -
             reimagining the meaning of convenience in the country through a
             variety of service offerings.
           </p>
